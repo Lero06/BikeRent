@@ -44,4 +44,11 @@ public class Bikes {
         this.status = BikeStatus.AVAILABLE;
         this.brand = brand;
     }
+    //toString
+
+    @Override
+    public String toString() {
+        return "Bikes{" + "id=" + id + ", status=" + status + ", brand=" + brand + '}';
+    }
+    
 }
