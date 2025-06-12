@@ -34,13 +34,26 @@ public class Users {
 
     //setters
     public void setPhone(String phone) {
-        this.phone = phone;
+       if (verifyPhone(phone)) {
+            this.phone= phone;
+        }
     }
 
     public void setEmail(String email) {
-        this.email = email;
+  if(verifyEmail(email)) {
+           this.email = email;
+       }
     }
     
+     public boolean verifyEmail(String email) {
+     String regex = "^[\\w.-]+@[\\w.-]+\\.[a-zA-z]{2,}$";
+     return email.matches(regex);
+    }
+     
+      public boolean verifyPhone(String phone) {
+        String regex = "^\\d{4}-\\d{4}$";
+        return phone.matches(regex);
+    }
     //constructor
 
     public Users(String name, int id, String phone, String email) {
