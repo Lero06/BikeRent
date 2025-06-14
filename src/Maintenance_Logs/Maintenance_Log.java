@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Maintenance_Log;
+package Maintenance_Logs;
 
 /**
  *
  * @author llean
  */
-public class Maintenance_Logs {
+public class Maintenance_Log {
     private String date;
     private String description;
-    private String responsible_technician;
+    private String responsible_technician; //cambia a tecnico de la carpeta tecnico
     private int idBike;
     
     //getters
@@ -46,7 +46,7 @@ public class Maintenance_Logs {
     }
     //constructor
 
-    public Maintenance_Logs(String date, String description, String responsible_technician, int idBike) {
+    public Maintenance_Log(String date, String description, String responsible_technician, int idBike) {
         this.date = date;
         this.description = description;
         this.responsible_technician = responsible_technician;

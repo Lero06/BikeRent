@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Station;
+package Stations;
 
 /**
  *
  * @author llean
  */
-public class Stations {
+public class Station {
     //attributes
     private int id;
     private String location;
@@ -33,7 +33,7 @@ public class Stations {
     }
     
     //constructor
-    public Stations(int id, String location, int maxCap) {
+    public Station(int id, String location, int maxCap) {
         this.id = id;
         this.location = location;
         this.maxCap = maxCap;
