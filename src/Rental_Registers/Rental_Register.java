@@ -2,51 +2,77 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Rental_Register;
-
+package Rental_Registers;
+import java.time.LocalDateTime;
+import Bikes.Bike;
+import Persons.Users;
 /**
  *
  * @author llean
  */
-public class Rental_Registers {
+public class Rental_Register {
     //Attributes
     private int id;
-    private int idUser;
-    private String EndDateAndTime;
-    
+    private Bike bike;
+    private LocalDateTime endDate;
+    private LocalDateTime startDate;
+    private Users user;
     //getters
 
     public int getId() {
         return id;
     }
 
-    public int getIdUser() {
-        return idUser;
+    public Bike getBike() {
+        return bike;
     }
 
-    public String getEndDateAndTime() {
-        return EndDateAndTime;
+    public LocalDateTime getEndDate() {
+        return endDate;
     }
-    
+
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public Users getUser() {
+        return user;
+    }
     //setters
 
-    public void setEndDateAndTime(String EndDateAndTime) {
-        this.EndDateAndTime = EndDateAndTime;
+    public void setBike(Bike bike) {
+        this.bike = bike;
     }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+    
     
     //constructor
 
-    public Rental_Registers(int id, int idUser, String EndDateAndTime) {
+    public Rental_Register(int id, Bike bike, LocalDateTime endDate, LocalDateTime startDate, Users user) {
         this.id = id;
-        this.idUser = idUser;
-        this.EndDateAndTime = EndDateAndTime;
+        this.bike = bike;
+        this.endDate = endDate;
+        this.startDate = startDate;
+        this.user = user;
     }
-    
+
     //toString
 
     @Override
     public String toString() {
-        return "Rental_Registers{" + "id=" + id + ", idUser=" + idUser + ", EndDateAndTime=" + EndDateAndTime + '}';
+        return "Rental_Register:" + "id=" + id + ", bike=" + bike + ", endDate=" + endDate + ", startDate=" + startDate + ", user=" + user;
     }
+
     
 }
