@@ -13,6 +13,7 @@ public class Station {
     private int id;
     private String location;
     private int maxCap;
+    private int[] Bikelist;
     
 //getters
     public int getId() {
@@ -26,22 +27,33 @@ public class Station {
     public int getMaxCap() {
         return maxCap;
     }
+
+    public int[] getBikelist() {
+        return Bikelist;
+    }
     
   //setters
     public void setMaxCap(int maxCap) {
         this.maxCap = maxCap;
     }
+
+    public void setBikelist(int[] Bikelist) {
+        this.Bikelist = Bikelist;
+    }
     
     //constructor
-    public Station(int id, String location, int maxCap) {
+    
+    public Station(int id, String location, int maxCap, int[] Bikelist) {
         this.id = id;
         this.location = location;
         this.maxCap = maxCap;
-    }
-    
+        this.Bikelist = Bikelist;
+    } 
     //toString
+
     @Override
     public String toString() {
-        return "Stations{" + "id=" + id + ", location=" + location + ", maxCap=" + maxCap + '}';
+        return "Station:" + "id=" + id + ", location=" + location + ", maxCap=" + maxCap + ", Bikelist=" + Bikelist;
     }
+
 }
