@@ -11,6 +11,11 @@ import Main.Lists;
 public class BikeList implements Lists <PedalBike> {
     private PedalBike list[];
 
+    public BikeList() {
+        this.list = new PedalBike[100];
+    }
+
+    
     @Override
     public boolean add(PedalBike t) {
         int max = list.length;

@@ -39,7 +39,7 @@ public class PedalBike {
     }
     //Constructor
 
-    public PedalBike(int id, BikeStatus status, String brand) {
+    public PedalBike(int id,  String brand) {
         this.id = id;
         this.status = BikeStatus.AVAILABLE;
         this.brand = brand;

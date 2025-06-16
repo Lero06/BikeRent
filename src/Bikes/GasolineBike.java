@@ -9,19 +9,19 @@ package Bikes;
  * @author llean
  */
 public class GasolineBike extends PedalBike {
-    private String FuelLevel;
+    private int FuelLevel;
 
-    public String getFuelLevel() {
+    public int getFuelLevel() {
         return FuelLevel;
     }
 
-    public void setFuelLevel(String FuelLevel) {
+    public void setFuelLevel(int FuelLevel) {
         this.FuelLevel = FuelLevel;
     }
 
-    public GasolineBike(String FuelLevel, int id, BikeStatus status, String brand) {
-        super(id, status, brand);
-        this.FuelLevel = FuelLevel;
+    public GasolineBike(int id,  String brand) {
+        super(id,brand);
+        this.FuelLevel = 100;
     }
 
     @Override

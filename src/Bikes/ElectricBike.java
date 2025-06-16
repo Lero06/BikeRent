@@ -19,9 +19,9 @@ public class ElectricBike extends PedalBike {
         this.BatteryLevel = BatteryLevel;
     }
 
-    public ElectricBike(int BatteryLevel, int id, BikeStatus status, String brand) {
-        super(id, status, brand);
-        this.BatteryLevel = BatteryLevel;
+    public ElectricBike(int id,  String brand) {
+        super(id, brand);
+        this.BatteryLevel = 100;
     }
 
     @Override
