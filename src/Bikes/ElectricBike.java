@@ -8,18 +8,18 @@ package Bikes;
  *
  * @author llean
  */
-public class ElectricBike extends Bike {
-    private String BatteryLevel;
+public class ElectricBike extends PedalBike {
+    private int BatteryLevel;
 
-    public String getBatteryLevel() {
+    public int getBatteryLevel() {
         return BatteryLevel;
     }
 
-    public void setBatteryLevel(String BatteryLevel) {
+    public void setBatteryLevel(int BatteryLevel) {
         this.BatteryLevel = BatteryLevel;
     }
 
-    public ElectricBike(String BatteryLevel, int id, BikeStatus status, String brand) {
+    public ElectricBike(int BatteryLevel, int id, BikeStatus status, String brand) {
         super(id, status, brand);
         this.BatteryLevel = BatteryLevel;
     }

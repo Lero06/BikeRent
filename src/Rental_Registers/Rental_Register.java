@@ -4,7 +4,7 @@
  */
 package Rental_Registers;
 import java.time.LocalDateTime;
-import Bikes.Bike;
+import Bikes.PedalBike;
 import Persons.Users;
 /**
  *
@@ -13,7 +13,7 @@ import Persons.Users;
 public class Rental_Register {
     //Attributes
     private int id;
-    private Bike bike;
+    private PedalBike bike;
     private LocalDateTime endDate;
     private LocalDateTime startDate;
     private Users user;
@@ -23,7 +23,7 @@ public class Rental_Register {
         return id;
     }
 
-    public Bike getBike() {
+    public PedalBike getBike() {
         return bike;
     }
 
@@ -40,7 +40,7 @@ public class Rental_Register {
     }
     //setters
 
-    public void setBike(Bike bike) {
+    public void setBike(PedalBike bike) {
         this.bike = bike;
     }
 
@@ -59,7 +59,7 @@ public class Rental_Register {
     
     //constructor
 
-    public Rental_Register(int id, Bike bike, LocalDateTime endDate, LocalDateTime startDate, Users user) {
+    public Rental_Register(int id, PedalBike bike, LocalDateTime endDate, LocalDateTime startDate, Users user) {
         this.id = id;
         this.bike = bike;
         this.endDate = endDate;

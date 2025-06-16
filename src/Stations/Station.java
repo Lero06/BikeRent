@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Stations;
-
+import Bikes.PedalBike;
 /**
  *
  * @author llean
@@ -13,7 +13,16 @@ public class Station {
     private int id;
     private String location;
     private int maxCap;
-    private int[] Bikelist;
+    private PedalBike pedalBike[];
+    
+    public void addPedalBike(PedalBike pedalBike) {
+        for (int i = 0; i < maxCap; i++) {
+            if(this.pedalBike[i] == null) {
+                this.pedalBike[i]= pedalBike;
+                break;
+            }
+        }
+    }
     
 //getters
     public int getId() {
@@ -28,17 +37,17 @@ public class Station {
         return maxCap;
     }
 
-    public int[] getBikelist() {
-        return Bikelist;
+    public PedalBike[] getPedalBike() {
+        return pedalBike;
     }
-    
+
   //setters
     public void setMaxCap(int maxCap) {
         this.maxCap = maxCap;
     }
 
     public void setBikelist(int[] Bikelist) {
-        this.Bikelist = Bikelist;
+        //this.Bikelist = Bikelist;
     }
     
     //constructor
@@ -47,13 +56,13 @@ public class Station {
         this.id = id;
         this.location = location;
         this.maxCap = maxCap;
-        this.Bikelist = Bikelist;
+       // this.Bikelist = Bikelist;
     } 
     //toString
 
     @Override
     public String toString() {
-        return "Station:" + "id=" + id + ", location=" + location + ", maxCap=" + maxCap + ", Bikelist=" + Bikelist;
+        return "Station:" + "id=" + id + ", location=" + location + ", maxCap=" + maxCap + ", Bikelist=" ;//+ Bikelist;
     }
 
 }

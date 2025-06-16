@@ -3,20 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Maintenance_Logs;
-
+import Persons.Technician;
+import Bikes.PedalBike;
+import java.time.LocalDate;
 /**
  *
  * @author llean
  */
 public class Maintenance_Log {
-    private String date;
+    private LocalDate date;
     private String description;
-    private String responsible_technician; //cambia a tecnico de la carpeta tecnico
-    private int idBike;
+    private Technician technician;
+    private PedalBike idPedalBike;
     
     //getters
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
@@ -24,16 +26,18 @@ public class Maintenance_Log {
         return description;
     }
 
-    public String getResponsible_technician() {
-        return responsible_technician;
+    public Technician getTechnician() {
+        return technician;
     }
 
-    public int getIdBike() {
-        return idBike;
+    public PedalBike getIdBike() {
+        return idPedalBike;
     }
+
+
     //setters
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -41,22 +45,25 @@ public class Maintenance_Log {
         this.description = description;
     }
 
-    public void setResponsible_technician(String responsible_technician) {
-        this.responsible_technician = responsible_technician;
+    public void setTechnician(Technician technician) {
+        this.technician = technician;
     }
-    //constructor
 
-    public Maintenance_Log(String date, String description, String responsible_technician, int idBike) {
+  
+    //constructor
+    
+    public Maintenance_Log(LocalDate date, String description, Technician technician, PedalBike idPedalBike) {
         this.date = date;
         this.description = description;
-        this.responsible_technician = responsible_technician;
-        this.idBike = idBike;
+        this.technician = technician;
+        this.idPedalBike = idPedalBike;
     }
+
     //toString
 
     @Override
     public String toString() {
-        return "Maintenance_Logs{" + "date=" + date + ", description=" + description + ", responsible_technician=" + responsible_technician + ", idBike=" + idBike + '}';
+        return "Maintenance_Logs{" + "date=" + date + ", description=" + description + ", responsible_technician=" + technician + ", idBike=" + idPedalBike + '}';
     }
     
 }

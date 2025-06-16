@@ -8,7 +8,7 @@ package Bikes;
  *
  * @author llean
  */
-public class GasolineBike extends Bike {
+public class GasolineBike extends PedalBike {
     private String FuelLevel;
 
     public String getFuelLevel() {
