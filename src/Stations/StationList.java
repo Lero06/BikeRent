@@ -2,22 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Bikes;
+package Stations;
 import Main.Lists;
 /**
  *
  * @author llean
  */
-public class BikeList implements Lists <PedalBike> {
-    private PedalBike list[];
-
-    public BikeList() {
-        this.list = new PedalBike[100];
-    }
-
+public class StationList implements Lists <Station>{ 
+        private Station list[];
     
-    @Override
-    public boolean add(PedalBike t) {
+         public StationList() {
+        this.list = new Station[100];
+    }
+         
+           @Override
+    public boolean add(Station t) {
         int max = list.length;
         for (int i = 0; i < max; i++) {
             if(list[i] == null){
@@ -29,7 +28,7 @@ public class BikeList implements Lists <PedalBike> {
     }
 
     @Override
-    public boolean delete(PedalBike t) {
+    public boolean delete(Station t) {
         for (int i = 0; i < list.length; i++) {
             if (list[i] == t) {
                 list[i] = null;
@@ -45,7 +44,7 @@ public class BikeList implements Lists <PedalBike> {
         for (int i = 0; i < max; i++) {
             for (int j = 0; j < max-1; j++) {
                 if(list[j] != null && list[j+1] != null && list[j].getId()>list[j+1].getId()) {
-                    PedalBike temp = list[j];
+                    Station temp = list[j];
                     list[j] = list[j+1];
                     list[j+1] = temp;
                 }
@@ -54,7 +53,7 @@ public class BikeList implements Lists <PedalBike> {
     }
 
     @Override
-    public PedalBike search(Object id) {
+    public Station search(Object id) {
         int max = list.length;
         int idt = Integer.parseInt(id.toString());
         for (int i = 0; i <max; i++) {

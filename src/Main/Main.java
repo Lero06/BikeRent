@@ -22,8 +22,7 @@ public class Main {
         bikeList.add(b2);
         bikeList.add(b3);
         bikeList.add(b1);
-        
-        System.out.println(bikeList.delete(2));
+       
     }
     
 }

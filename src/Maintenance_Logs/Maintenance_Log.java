@@ -11,12 +11,17 @@ import java.time.LocalDate;
  * @author llean
  */
 public class Maintenance_Log {
+    private int id;
     private LocalDate date;
     private String description;
     private Technician technician;
     private PedalBike idPedalBike;
     
     //getters
+
+    public int getId() {
+        return id;
+    }
 
     public LocalDate getDate() {
         return date;
@@ -36,6 +41,10 @@ public class Maintenance_Log {
 
 
     //setters
+
+    public void setId(int Id) {
+        this.id = Id;
+    }
 
     public void setDate(LocalDate date) {
         this.date = date;
@@ -63,7 +72,7 @@ public class Maintenance_Log {
 
     @Override
     public String toString() {
-        return "Maintenance_Logs{" + "date=" + date + ", description=" + description + ", responsible_technician=" + technician + ", idBike=" + idPedalBike + '}';
+        return "Maintenance_Logs: "+"ID= " + id + "date=" + date + ", description=" + description + ", responsible_technician=" + technician + ", idBike=" + idPedalBike;
     }
     
 }
